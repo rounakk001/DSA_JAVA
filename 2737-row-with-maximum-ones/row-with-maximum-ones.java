@@ -1,15 +1,12 @@
 class Solution {
     public int[] rowAndMaximumOnes(int[][] mat) {
-        int n = mat.length;
-        int m = mat[0].length;
-
         int maxOnes = 0;
         int rowIndex = 0;
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < mat.length; i++) {
             int count = 0;
-            for (int j = 0; j < m; j++) {
-                if (mat[i][j] == 1) count++;
+            for (int val : mat[i]) {
+                count += val;
             }
 
             if (count > maxOnes) {
