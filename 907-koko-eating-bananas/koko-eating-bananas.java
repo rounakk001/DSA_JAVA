@@ -8,10 +8,15 @@ class Solution {
         return c;
     }
     public int minEatingSpeed(int[] piles, int h) {
-       int max= Arrays.stream(piles).max().getAsInt();
+      int high=0;
+        for(int p:piles){
+            high= Math.max(high, p);
+
+
+        }
         int n=piles.length;
         int low=1;
-        int high=max;
+        
          int ans=1;
         while(low<=high){
             int mid=low+(high-low)/2;
